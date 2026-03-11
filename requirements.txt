@@ -1,0 +1,6 @@
+beautifulsoup4>=4.12.3
+langgraph>=0.0.25
+langchain-core>=0.1.30
+langchain-google-genai>=1.0.1
+pydantic>=2.6.0
+requests>=2.31.0
