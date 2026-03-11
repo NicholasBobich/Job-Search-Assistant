@@ -30,8 +30,10 @@ The application is broken into four different agents that pass structured data t
 2. **Create a Virtual Environment and Install Dependencies**
    ```bash
    python -m venv venv
+
    source venv/bin/activate # Mac/Linux
    venv\Scripts\Activate.ps1 # Windows
+   
    pip install -r requirements.txt
 3. **Set Environment Variables**
    ```bash
