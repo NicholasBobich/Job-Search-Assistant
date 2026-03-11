@@ -24,8 +24,9 @@ The application is broken into four different agents that pass structured data t
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/yourusername/autonomous-job-assistant.git](https://github.com/yourusername/autonomous-job-assistant.git)
-   cd autonomous-job-assistant
+   git clone [https://github.com/NicholasBobich/Job-Search-Assistant.git](https://github.com/NicholasBobich/Job-Search-Assistant.git)
+   cd Job-Search-Assistant
+
 2. **Create a Virtual Environment and Install Dependencies**
    ```bash
    python -m venv venv
