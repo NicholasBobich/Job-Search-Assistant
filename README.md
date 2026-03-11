@@ -24,7 +24,7 @@ The application is broken into four different agents that pass structured data t
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/NicholasBobich/Job-Search-Assistant.git](https://github.com/NicholasBobich/Job-Search-Assistant.git)
+   git clone https://github.com/NicholasBobich/Job-Search-Assistant.git
    cd Job-Search-Assistant
 
 2. **Create a Virtual Environment and Install Dependencies**
@@ -40,6 +40,6 @@ The application is broken into four different agents that pass structured data t
 ## Run the App
 ```bash
 python main.py \
-  --job "[https://careers.company.com/job/123](https://careers.company.com/job/123)" \
+  --job "https://careers.company.com/job/123" \
   --resume "./my_resume.pdf" \
-  --about "[https://company.com/about](https://company.com/about)" # Optional
+  --about "https://company.com/about" # Optional
