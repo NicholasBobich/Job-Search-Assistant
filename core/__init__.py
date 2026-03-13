@@ -1,7 +1,9 @@
 from .state import (
-    JobSearchState
+    JobSearchState,
+    ExtractedJobDetails
 )
 
 __all__ = [
-    "JobSearchState"
+    "JobSearchState",
+    "ExtractedJobDetails"
 ]

@@ -24,12 +24,33 @@ def scraper_agent(state: JobSearchState):
             element.decompose()
 
         # Space separator ensures words don't get mashed together when HTML tags are removed
-        raw_text = soup.get_text(separator=' ', strip=True)
+        raw_job_text = soup.get_text(separator=' ', strip=True)
         
-        print(f"Successfully scraped: {raw_text}")
+        print(f"Successfully scraped job text: {raw_job_text}")
+
+        raw_about_text = None
+        about_url = state.get("about_us_url")
         
+        if about_url:
+            try:
+                response = requests.get(about_url, headers=headers, timeout=10)
+                soup = BeautifulSoup(response.text, 'html.parser')
+                
+                for element in soup(["script", "style", "nav", "footer", "header", "meta", "noscript"]):
+                    element.decompose()
+                
+                raw_about_text = soup.get_text(separator=' ', strip=True)
+                print(f"Successfully scraped About text: {raw_about_text}")
+            
+            except Exception as e:
+                print(f"Scraper Agent Warning: Failed to scrape About page: {e}")
+                raw_about_text = "Failed to retrieve About page."
+
         # Update state
-        return {"raw_job_posting": raw_text}
+        return {
+            "raw_job_posting": raw_job_text,
+            "raw_about_us": raw_about_text
+        }
         
     except Exception as e:
         print(f"Scraper Agent Error: {e}")
