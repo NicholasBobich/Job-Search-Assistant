@@ -33,3 +33,22 @@ class ExtractedJobDetails(BaseModel):
     company_culture_tone: str = Field(
         description="A short summary describing the company culture based on the job description."
     )
+
+class EvaluationResult(BaseModel):
+    match_score: int = Field(
+        description="A score from 0 to 100 representing how well the resume matches the job requirements."
+    )
+    missing_keywords: List[str] = Field(
+        description="Specific technical terms, tools, or frameworks mentioned in the job posting that are completely missing from the resume."
+    )
+    experience_gaps: List[str] = Field(
+        description="Broader conceptual gaps. For example, if the job requires 'leading a team' but the resume only shows individual work."
+    )
+
+class ApplicationMaterials(BaseModel):
+    drafted_cover_letter: str = Field(
+        description="A custom cover letter drafted for the specific job, matching the company's culture tone."
+    )
+    resume_tweaks: List[str] = Field(
+        description="A list of 3-5 specific, rewritten resume bullet points that incorporate the missing keywords and address the experience gaps identified by the evaluator."
+    )

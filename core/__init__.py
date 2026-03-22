@@ -1,9 +1,13 @@
 from .state import (
     JobSearchState,
-    ExtractedJobDetails
+    ExtractedJobDetails,
+    EvaluationResult,
+    ApplicationMaterials
 )
 
 __all__ = [
     "JobSearchState",
-    "ExtractedJobDetails"
+    "ExtractedJobDetails",
+    "EvaluationResult",
+    "ApplicationMaterials"
 ]

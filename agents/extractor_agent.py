@@ -8,6 +8,8 @@ GOOGLE_API_KEY = os.environ["GOOGLE_API_KEY"]
 
 def extractor_agent(state: JobSearchState):
     
+    print("Extractor Agent: Gathering job requirements...")
+    
     raw_job_posting = state.get("raw_job_posting")
     raw_about_us = state.get("raw_about_us")
     
@@ -38,6 +40,8 @@ def extractor_agent(state: JobSearchState):
     )
     
     result = structured_llm.invoke(formatted_prompt)
+
+    print("Extractor Agent: Requirements extracted successfully!")
     
     return {
         "must_have_skills": result.must_have_skills,

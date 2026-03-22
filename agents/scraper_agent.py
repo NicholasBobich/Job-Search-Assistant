@@ -4,6 +4,9 @@ from bs4 import BeautifulSoup
 
 
 def scraper_agent(state: JobSearchState):
+    
+    print("Scraper Agent: Scraping job URL job listing details...")
+
     job_url = state.get("job_url")
     if not job_url:
         return {"raw_job_posting": "Error: No job URL provided."}
@@ -46,7 +49,8 @@ def scraper_agent(state: JobSearchState):
                 print(f"Scraper Agent Warning: Failed to scrape About page: {e}")
                 raw_about_text = "Failed to retrieve About page."
 
-        # Update state
+        print("Scraper Agent: Scraped job details successfully!")
+
         return {
             "raw_job_posting": raw_job_text,
             "raw_about_us": raw_about_text
