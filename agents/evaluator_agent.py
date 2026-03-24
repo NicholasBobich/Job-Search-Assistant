@@ -21,7 +21,7 @@ def evaluator_agent(state: JobSearchState):
             "experience_gaps": []
         }
     
-    llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0)
+    llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
     structured_llm = llm.with_structured_output(EvaluationResult)
     
     prompt_template = PromptTemplate.from_template(
