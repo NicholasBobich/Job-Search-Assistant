@@ -1,6 +1,7 @@
 from typing import TypedDict, List, Optional
 from pydantic import BaseModel, Field
 
+
 class JobSearchState(TypedDict):
     job_url: str
     about_us_url: Optional[str]

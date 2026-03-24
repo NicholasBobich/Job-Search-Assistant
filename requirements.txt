@@ -4,3 +4,5 @@ langchain-core>=0.1.30
 langchain-google-genai>=1.0.1
 pydantic>=2.6.0
 requests>=2.31.0
+python-dotenv>=1.2.2
+pypdf>=6.9.2
