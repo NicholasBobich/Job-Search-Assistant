@@ -40,8 +40,18 @@ The application is broken into four different agents that pass structured data t
    export GOOGLE_API_KEY="your_api_key_here"
 
 ## Run the App
+
+Two options are available: Web UI or CLI
+
+### Option 1: Web UI
+```bash
+streamlit run main.py
+```
+
+### Option 2: CLI
 ```bash
 python main.py \
   --job "https://careers.company.com/job/123" \
   --resume "./my_resume.pdf" \
   --about "https://company.com/about" # Optional
+```
