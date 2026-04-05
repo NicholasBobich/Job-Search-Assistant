@@ -47,6 +47,7 @@ Two options are available: Web UI or CLI
 ```bash
 streamlit run main.py
 ```
+Open http://localhost:8501 in your browser.
 
 ### Option 2: CLI
 ```bash
