@@ -1,10 +1,7 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
 from core import JobSearchState, ApplicationMaterials
-import os
 
-
-GOOGLE_API_KEY = os.environ["GOOGLE_API_KEY"]
 
 def writer_agent(state: JobSearchState):
 

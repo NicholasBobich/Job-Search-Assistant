@@ -1,10 +1,7 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
-import os
 from core import JobSearchState, ExtractedJobDetails
 
-
-GOOGLE_API_KEY = os.environ["GOOGLE_API_KEY"]
 
 def extractor_agent(state: JobSearchState):
     
